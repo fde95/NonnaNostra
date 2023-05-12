@@ -1,0 +1,100 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+    background-color: #ecd8d8;
+    box-shadow: 10px 10px 10px rgb(0, 0, 0,0.20);
+}
+
+.navbar-brand, .navbar-brand:hover{
+    cursor: default;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2.8em;
+    letter-spacing: -2px; /*diminuir espaço entre letras*/
+    color: #F22F1D;
+}
+
+.nav-pills .nav-link.active{
+    background-color: #D92B2B;
+}
+
+.nav-link{
+    color: #8C7272 ;
+}
+
+.nav-link:hover{
+    color: #fff;
+}
+
+.navbar-toggler{
+    background-color:#D92B2B;
+    border: none;
+}
+
+.emphasis{
+    font-family: 'Kaushan Script', cursive;
+    letter-spacing: -1.6px; 
+}
+
+.emphasis span,
+.social{
+    color: #D92B2B;
+}
+
+#aboutUs, #cardapio{
+    background-color: #ecd8d867;
+}
+
+.itens{
+    text-align: center;
+}
+.item{
+    display: inline;
+}
+
+.section-tittle span,
+.formtext{
+    color: #D92B2B;
+}
+
+#cardapio .nav-link:hover{
+    color: #D92B2B;
+}
+
+#cardapio .nav-link.active{
+    color: #fff;
+}
+
+.social-links li{
+    list-style: none;
+    display: inline;
+}
+
+.social-links li a{
+    text-decoration: none;
+}
+
+.btn{
+    background-color: #F22F1D;
+    color: #fff;
+}
+
+.btn:hover{
+    background-color: #e74739;
+    color: #fff;
+}
+
+.error{
+    color: rgb(133, 0, 0);
+    font-weight: bolder;
+    font-size: .9em;
+}
+
+@media (max-width: 767px) {
+    .carousel-item img{
+        height: 280px;
+    }
+
+    
+}

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./lib/bootstrap.min.css"> <!--Bootstrap-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="./main.css">
+    <title>Nonna Nostra</title>
+</head>
+<body>
+    <header class="navbar navbar-expand-lg sticky-top p-4" id="cabecalho"> <!--Incluir Padding com a 'P' = All / Ao incluir as letras 'T','B',S' ou 'E' será incluso um direcionamento de 'TOP', 'BOTTOM', 'START' e 'END'-->
+        <div class="container">
+            <h1 class="navbar-brand m-0">Nonna Nostra</h1>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-navegacao"> <!--Chamada de Botão Hamburguer / data-bs-toggle irá colapsar o menu / data-bs-target irá referenciar o NAV-->
+                <span class="navbar-toggler-icon"></span> <!--span de imagem do menu hamburguer-->
+            </button>
+            <nav class="navbar-collapse collapse justify-content-end" id="menu-navegacao"> <!--apenas NAV irá aparecer menu padrão / navbar- collapse collapse irá remover o NAV da tela até que seja Colapsado / deve conter ID para referencia de botão de colapso / justify-content-end serve para alinhar menu ao final da div-->
+                <ul class="nav nav-pills d-block d-md-flex"> <!--d-md-flex = sintaxe: 'propriedade'-'breakpoint'-'valor' = igual para todos--->
+                    <li class="nav-item fw-bold"> <!--fw = font-weight-->
+                        <a class="nav-link" href="#aboutUs">
+                            <i class="bi bi-house-door-fill me-1"></i> <!--O icone irá se adaptar as configurações de cor do css-->
+                            Sobre
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#eventos">
+                            <i class="bi bi-calendar-check-fill me-1"></i>
+                            Eventos
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#cardapio">
+                            <i class="bi bi-postcard-fill me-1"></i>
+                            Cardápio
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#contact">
+                            <i class="bi bi-chat-fill me-1"></i>
+                            Fale conosco
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div data-bs-spy="scroll" data-bs-target="#cabecalho" data-bs-smooth-scroll="true"> <!--Inicio do Spy no Scroll-->
+        <!--Inicio da aba Sobre-->
+        <section id="aboutUs">
+            <!--Inicio do Carrossel-->
+            <div class="carousel slide carousel-fade" data-bs-ride="carousel" id="carrossel"><!--Chama o carrossel - na função slide - com efeito fade / data irá realizar o autoplay / ID necessário para funcionamento dos botões-->
+                <div class="carousel-inner"> <!--Abre o carrossel-->
+                    <div class="carousel-item active" data-bs-interval="2800"> <!--Item do Carrossel - Para iniciar, deve conter a class Active-->
+                        <img src="./images/slides/slide1.png" alt="Foto do espaço interno do restaurante">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2800">
+                        <img src="./images/slides/slide2.png" alt="Duas taças de vinho">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2800">
+                        <img src="./images/slides/slide3.png" alt="Uma mesa com um prato do chef">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carrossel" data-bs-slide="prev"> <!--Botão de mudança de imagem / target selecionará a área desejada / data-bs-slide = para onde o botão levará -->
+                    <span class="carousel-control-prev-icon"></span> <!--icone de seta-->
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carrossel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-indicators"> <!--Chama indicador de apresentação atual e qnt inclusa-->
+                    <button type="button" class="active" data-bs-target="#carrossel" data-bs-slide-to="0"></button> <!--a class active deve estar no primeiro elemento / o Slide-To levará para o array correspondente (começando sempre da casa 0)-->
+                    <button type="button" data-bs-target="#carrossel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carrossel" data-bs-slide-to="2"></button>
+                </div>
+            </div>
+            <!--Fim do Carrossel-->
+        
+            <div class="pt-5 pb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img class="d-block w-100 rounded-2" src="./images/restaurante.jpg" alt="Foto do espaço iterno do restaurante"> <!--classe ROUNDED aplica border-radious-->
+                        </div>
+                        <div class="col-md-7 mt-3 mt-md-0">
+                            <h2 class="emphasis">La <span>Nonna</span></h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi officia laborum commodi eius debitis esse hic nam cupiditate magnam sed, nobis, velit reprehenderit aspernatur et. Aliquam quis quaerat voluptates facere.
+                            </p>
+                            <h3 class="emphasis">Lo <span>Spazio</span></h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium cum temporibus, quisquam et itaque doloremque nam aut. Dolorem unde, nihil omnis quis error odio itaque eveniet voluptatibus necessitatibus in velit?</p>
+                            <!-- <ul class="itens">
+                                <li class="item pe-5 fw-bolder">Aniversário</li>
+                                <li class="item pe-5 fw-bolder">Casamento</li>
+                                <li class="item pe-5 fw-bolder">Confraternizações</li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Inicio da aba Sobre-->
+
+        <!--Inicio da aba Eventos-->
+        <section id="eventos" class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <h2 class="emphasis h1 text-center pb-4">Para todas as <span>ocasiões</span></h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="d-block w-100 rounded-2" src="./images/eventos/aniversario.jpg" alt="Cupcake com velas de aniversário">
+                        <h3 class="section-tittle ps-2 pt-2">
+                            <span><i class="bi bi-calendar-heart-fill"></i></span>
+                            Compleanno
+                        </h3>
+                        <p class="ps-2 pe-2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis amet saepe doloribus at ipsum consectetur minus, fugiat eligendi quam ipsam earum ullam est cumque. Mollitia atque autem recusandae dolore omnis.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="d-block w-100 rounded-2" src="./images/eventos/casamento.jpg" alt="Mesa de casamento">
+                        <h3 class="section-tittle ps-2 pt-2">
+                            <span><i class="bi bi-arrow-through-heart-fill"></i></span>
+                            Nozze
+                        </h3>
+                        <p class="ps-2 pe-2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis amet saepe doloribus at ipsum consectetur minus, fugiat eligendi quam ipsam earum ullam est cumque. Mollitia atque autem recusandae dolore omnis.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="d-block w-100 rounded-2" src="./images/eventos/confraternizacoes.jpg" alt="Três pessoas brindando">
+                        <h3 class="section-tittle ps-2 pt-2">
+                            <span><i class="bi bi-people-fill"></i></span>
+                            Confraternizzazione
+                        </h3>
+                        <p class="ps-2 pe-2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis amet saepe doloribus at ipsum consectetur minus, fugiat eligendi quam ipsam earum ullam est cumque. Mollitia atque autem recusandae dolore omnis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fim da aba Eventos-->
+
+        <!--Inicio da aba Cardápio-->
+        <section id="cardapio" class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <h2 class="emphasis h1 text-center mb-5">Nosso <span>Cardápio</span></h2>
+                </div>
+                <div class="row">
+                    <aside class="col-md-2">
+                        <nav class="nav nav-pills flex-column">
+                            <button data-bs-toggle="tab" data-bs-target="#not-alcool" type="button" class="text-start nav-link w-100 active">Bebidas Não Alcóolicas</button>
+                            <button data-bs-toggle="tab" data-bs-target="#alcool" type="button" class="text-start nav-link w-100">Bebidas Alcóolicas</button>
+                            <button data-bs-toggle="tab" data-bs-target="#entradas" type="button" class="text-start nav-link w-100">Entradas</button>
+                            <button data-bs-toggle="tab" data-bs-target="#principal" type="button" class="text-start nav-link w-100">Pratos Principais</button>
+                            <button data-bs-toggle="tab" data-bs-target="#sobremesas" type="button" class="text-start nav-link w-100">Sobremesas</button>
+                        </nav>
+                    </aside>
+                    <div class="col-md-10">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="not-alcool">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./images/cardapio/bebidas/coca-cola.jpg" alt="Coca-Cola servida em um copo com gelo. Copo vazio com limão e gelo.">
+                                        <h5 class="mt-3 ps-2 fw-bold">Coca-Cola</h5>
+                                        <p class="ps-2 pe-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./images/cardapio/bebidas/suco.jpg" alt="Copo com suco de laranja e duas metades de uma laranja em volta.">
+                                        <h5 class="mt-3 ps-2 fw-bold">Sucos</h5>
+                                        <p class="ps-2 pe-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./images/cardapio/bebidas/coca-cola.jpg" alt="">
+                                        <h5 class="mt-3 ps-2 fw-bold">Coca-Cola</h5>
+                                        <p class="ps-2 pe-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./images/cardapio/bebidas/suco.jpg" alt="Copo com suco de laranja e duas metades de uma laranja em volta.">
+                                        <h5 class="mt-3 ps-2 fw-bold">Sucos</h5>
+                                        <p class="ps-2 pe-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./images/cardapio/bebidas/coca-cola.jpg" alt="Coca-Cola servida em um copo com gelo. Copo vazio com limão e gelo.">
+                                        <h5 class="mt-3 ps-2 fw-bold">Coca-Cola</h5>
+                                        <p class="ps-2 pe-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./images/cardapio/bebidas/suco.jpg" alt="Copo com suco de laranja e duas metades de uma laranja em volta.">
+                                        <h5 class="mt-3 ps-2 fw-bold">Sucos</h5>
+                                        <p class="ps-2 pe-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./images/cardapio/bebidas/coca-cola.jpg" alt="">
+                                        <h5 class="mt-3 ps-2 fw-bold">Coca-Cola</h5>
+                                        <p class="ps-2 pe-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./images/cardapio/bebidas/suco.jpg" alt="Copo com suco de laranja e duas metades de uma laranja em volta.">
+                                        <h5 class="mt-3 ps-2 fw-bold">Sucos</h5>
+                                        <p class="ps-2 pe-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="alcool">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./images/cardapio/bebidas/cerveja.jpg" alt="Dois copos com cerveja.">
+                                        <h5 class="mt-3 ps-2 fw-bold">Cervejas</h5>
+                                        <p class="ps-2 pe-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./images/cardapio/bebidas/vinho.jpg" alt="Uma garrafa e uma taça com vinho.">
+                                        <h5 class="mt-3 ps-2 fw-bold">Vinhos</h5>
+                                        <p class="ps-2 pe-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./images/cardapio/bebidas/cerveja.jpg" alt="Dois copos com cerveja.">
+                                        <h5 class="mt-3 ps-2 fw-bold">Cervejas</h5>
+                                        <p class="ps-2 pe-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./images/cardapio/bebidas/vinho.jpg" alt="Uma garrafa e uma taça com vinho.">
+                                        <h5 class="mt-3 ps-2 fw-bold">Vinhos</h5>
+                                        <p class="ps-2 pe-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="entradas">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./images/cardapio/entradas/entrada.jpg" alt="Prato com petiscos.">
+                                        <h5 class="mt-3 ps-2 fw-bold">Petiscos</h5>
+                                        <p class="ps-2 pe-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./images/cardapio/entradas/entrada.jpg" alt="Prato com petiscos.">
+                                        <h5 class="mt-3 ps-2 fw-bold">Petiscos</h5>
+                                        <p class="ps-2 pe-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./images/cardapio/entradas/entrada.jpg" alt="Prato com petiscos.">
+                                        <h5 class="mt-3 ps-2 fw-bold">Petiscos</h5>
+                                        <p class="ps-2 pe-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="principal">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./images/cardapio/pratos/pizza.jpg" alt="Pizza.">
+                                        <h5 class="mt-3 ps-2 fw-bold">Pizzas</h5>
+                                        <p class="ps-2 pe-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./images/cardapio/pratos/salmao.jpg" alt="Salmão grelhado com salada.">
+                                        <h5 class="mt-3 ps-2 fw-bold">Salmão Grelhado</h5>
+                                        <p class="ps-2 pe-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="sobremesas">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./images/cardapio/sobremesas/bolo.jpg" alt="Bolo.">
+                                        <h5 class="mt-3 ps-2 fw-bold">Banoffee</h5>
+                                        <p class="ps-2 pe-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100 rounded-2" src="./images/cardapio/sobremesas/cupcake.jpg" alt="*Cupcake.">
+                                        <h5 class="mt-3 ps-2 fw-bold">Mini Cupcake</h5>
+                                        <p class="ps-2 pe-2">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fim da aba Cardápio-->
+
+        <!--Inicio da aba Contatos-->
+        <section id="contact" class="pt-5 pb-5">
+            <div class="container">
+                <h2 class="emphasis h1 text-center mb-5"> 
+                    Fale <span>Conosco</span>
+                </h2>
+                <div class="row">
+                    <div class="col-md-7 mb-5">
+                        <form>
+                            <div>
+                                <label for="nome" class="form-label fw-bolder formtext">Nome</label>
+                                <input type="text" class="form-control" id="nome" name="name" required>
+                            </div>
+                            <div>
+                                <label for="email" class="form-label mt-4 fw-bolder formtext">E-mail</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div>
+                                <label for="cel" class="form-label mt-4 fw-bolder formtext">Celular</label>
+                                <input type="tel" class="form-control" id="cel" name="tel" required>
+                            </div>
+                            <div>
+                                <label for="mensagem" class="form-label mt-4 fw-bolder formtext">Mensagem</label>
+                                <textarea id="mensagem" class="form-control" name="mensagem" required></textarea>
+                            </div>
+                            <button type="submit" class="btn mt-3 w-100">Enviar</button>
+                        </form>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <h3 class="section-tittle fs-4">
+                                <i class="social bi bi-hand-thumbs-up-fill"></i>
+                                Redes Sociais
+                            </h3>
+                            <ul class="social-links">
+                                <li class="fs-4">
+                                    <a href="https://github.com/fde95">
+                                        <i class="me-3 social bi bi-github"></i>
+                                    </a>
+                                </li>
+                                <li class="fs-4">
+                                    <a href="https://www.linkedin.com/in/fde95/">
+                                        <i class="me-3 social bi bi-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li class="fs-4">
+                                    <a href="https://www.instagram.com/fde.95/">
+                                        <i class="social bi bi-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row mt-4">
+                            <h3 class="section-tittle fs-4">
+                                <i class="social bi bi-geo-alt-fill"></i>
+                                Endereço
+                            </h3>
+                            <p>
+                                Rua Endereço, 987 - Jardim Bootstrap - São Paulo/SP
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fim da aba Contatos-->
+
+    </div><!--Fim do Spy no Scroll-->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="./lib/jquery.validate.min.js"></script>
+    <script src="./lib/messages_pt_BR.min.js"></script>
+    <script src="./lib/jquery.mask.min.js"></script>
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
