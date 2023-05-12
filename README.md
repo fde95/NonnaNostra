@@ -1,6 +1,6 @@
 <h1 align="center">
   <p align="center"><a href="https://nonna-nostra.vercel.app/">Nonna Nostra</a></p>
- <img src="https://media.giphy.com/media/135E47VKw6TM6A/giphy.gif" alt="Italian men">
+ <img src="https://media.giphy.com/media/XNhmbeWeZl0By/giphy.gif" alt="Italian men">
 </h1>
 <div style="display: inline_block">
   <div align="center">
