@@ -98,3 +98,10 @@ body{
 
     
 }
+
+footer,
+footer a{
+    text-decoration: none;
+    color: #8C7272 ;
+    background-color: #ecd8d8;
+}
